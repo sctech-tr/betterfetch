@@ -1,0 +1,13 @@
+# If you'd like the colored dots at the bottom of the fetch to be removed, you
+# may do so here.
+# By default, they are enabled.
+#colorsoff=1
+
+# Define custom information here!
+#host=MyAwesomePC
+#os=MyDistro
+#kernel=CustomAwesomeKernel
+#uptime=478247238472
+#shell=mysh
+#de=CustomDE
+#terminal=konsole
