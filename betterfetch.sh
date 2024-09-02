@@ -12,12 +12,11 @@ fi
 [ -e /etc/betterfetchrc ] && . /etc/betterfetchrc 2> /dev/null
 [ -e ~/.betterfetchrc ] && . ~/.betterfetchrc 2> /dev/null
 
-REPO="sctech-tr/betterfetch"
 CURRENT_VERSION_FILE="/etc/betterfetch-version"  # Path to the file containing the current version
-GITHUB_API="https://api.github.com/repos/$REPO/releases/latest"
+REMOTE_VERSION_URL="https://raw.githubusercontent.com/sctech-tr/betterfetch/main/betterfetch-version"
 
-# Fetch the latest release version from GitHub
-LATEST_VERSION=$(curl -s $GITHUB_API | jq -r '.tag_name')
+# Fetch the remote version from the URL
+REMOTE_VERSION=$(curl -s $REMOTE_VERSION_URL)
 
 # Read the current version from the version file
 if [ -f "$CURRENT_VERSION_FILE" ]; then
@@ -27,10 +26,12 @@ else
   exit 1
 fi
 
-if [ "$LATEST_VERSION" != "$CURRENT_VERSION" ]; then
-  echo "betterfetch ($LATEST_VERSION) is available! you are currently on version $CURRENT_VERSION."
+# Compare the remote version with the current version
+if [ "$REMOTE_VERSION" != "$CURRENT_VERSION" ]; then
+  echo "betterfetch ($REMOTE_VERSION) is available! you are currently on version $CURRENT_VERSION."
   exit 0
 fi
+
 
 
 # the meat and potatoes, actual fetch
