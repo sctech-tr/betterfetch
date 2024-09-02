@@ -43,7 +43,7 @@ fi
 [ -z "$uptime" ] && uptime=$(uptime -p 2>/dev/null | sed "s/up //")
 [ -z "$shell" ] && shell=$(printf "$SHELL" | sed "s/\/bin\///" | sed "s/\/usr//")
 [ -z "$de" ] && de=$(echo $XDG_CURRENT_DESKTOP)
-[ -z "$terminal" ] && terminal=$(ps -o comm= -p $(ps -o ppid= -p $$))
+[ -z "$terminal" ] && terminal=$(readlink "/proc/$(cat /proc/$(echo $$)/stat|cut -d ' ' -f 4)/exe")
 
 printf "$USER@$host\n"
 printf "OS           ${nc} $os\n"
