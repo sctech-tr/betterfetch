@@ -37,7 +37,10 @@ fi
 # the meat and potatoes, actual fetch
 
 # only set these if they are not already set by the config file
-[ -z "$os" ] && . /etc/os-release 2>/dev/null || export os="Unknown"
+if [ -z "$os" ]; then
+    . /etc/os-release 2>/dev/null
+    os=$PRETTY_NAME  # Use PRETTY_NAME or NAME
+fi
 [ -z "$host" ] && host=$(cat /proc/sys/kernel/hostname)
 [ -z "$kernel" ] && kernel=$(sed "s/version // ; s/ (.*//" /proc/version)
 [ -z "$uptime" ] && uptime=$(uptime -p 2>/dev/null | sed "s/up //")
