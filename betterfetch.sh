@@ -32,6 +32,10 @@ if [ "$REMOTE_VERSION" != "$CURRENT_VERSION" ]; then
   exit 0
 fi
 
+if [ $USER = "root" ]; then
+  echo -e "\033[31mYOU ARE ROOT!!!!\033[0m"
+fi
+
 # the meat and potatoes, actual fetch
 
 # only set these if they are not already set by the config file
