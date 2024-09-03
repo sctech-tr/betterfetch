@@ -28,7 +28,7 @@ fi
 
 # Compare the remote version with the current version
 if [ "$REMOTE_VERSION" != "$CURRENT_VERSION" ]; then
-  echo "betterfetch ($REMOTE_VERSION) is available! you are currently on version $CURRENT_VERSION."
+  echo "betterfetch $REMOTE_VERSION is available! you are currently on version $CURRENT_VERSION."
   exit 0
 fi
 
