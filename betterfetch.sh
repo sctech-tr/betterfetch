@@ -32,8 +32,6 @@ if [ "$REMOTE_VERSION" != "$CURRENT_VERSION" ]; then
   exit 0
 fi
 
-
-
 # the meat and potatoes, actual fetch
 
 # only set these if they are not already set by the config file
@@ -46,7 +44,19 @@ fi
 [ -z "$uptime" ] && uptime=$(uptime -p 2>/dev/null | sed "s/up //")
 [ -z "$shell" ] && shell=$(printf "$SHELL" | sed "s/\/bin\///" | sed "s/\/usr//")
 [ -z "$de" ] && de=$(echo $XDG_CURRENT_DESKTOP)
-[ -z "$terminal" ] && terminal=$(readlink "/proc/$(cat /proc/$(echo $$)/stat|cut -d ' ' -f 4)/exe")
+if [ -z "$terminal" ]; then
+    terminals="konsole xterm gnome-terminal xfce4-terminal alacritty st urxvt terminator tilix kitty lxterminal yakuake"  # added yakuake
+    terminal="unknown"
+    cur=$$
+    while cur=$(ps -o ppid:1= -p "$cur") && ((cur)); do
+      comm=$(<"/proc/$cur/comm")
+      if [[ " $terminals " = *" $comm "* ]]; then
+        terminal=$comm
+        break
+      fi
+    done
+fi
+
 
 printf "$USER@$host\n"
 printf "OS           ${nc} $os\n"
