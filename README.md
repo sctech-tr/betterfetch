@@ -18,6 +18,9 @@ type ```betterfetch``` to run it
 type ```betterfetchrc``` to edit the config file
 ## How do I install it?
 ### Linux
+#### Distros that use RPM
+i have a copr build pending. once it finishes, i will update this. meanwhile, you can download the latest rpm file from a release.
+#### Other distros
 run this:
 ```
 git clone https://github.com/sctech-tr/betterfetch.git && cd betterfetch && sudo make install
