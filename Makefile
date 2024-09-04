@@ -4,11 +4,11 @@ help:
 	@echo "make uninstall    remove betterfetch"
 
 install:
-	chmod +x betterfetchrc.sh
 	cp betterfetch.sh /usr/bin/betterfetch
 	cp betterfetchrc.sh /usr/bin/betterfetchrc
 	cp betterfetchrc /etc/betterfetchrc
 	cp betterfetch-version /etc/betterfetch-version
+	sudo chmod +x /usr/bin/betterfetchrc
 
 uninstall:
 	rm /usr/bin/betterfetch
