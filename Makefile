@@ -1,21 +1,18 @@
 SHELL = /bin/sh
-
-INSTALL_DIR = /usr/bin/
-IN_NAME = betterfetch.sh
-OUT_NAME = betterfetch
-
 help:
 	@echo "make install      install betterfetch"
-	@echo "make uninstall    remove betterfetch."
-	@echo "make rmconfig     remove betterfetch configuration files."
+	@echo "make uninstall    remove betterfetch"
 
 install:
-	cp ${IN_NAME} ${INSTALL_DIR}${OUT_NAME}
-	[ -e /etc/zshrc ] || cp betterfetchrc /etc/betterfetchrc
+	cp betterfetch.sh /usr/bin/betterfetch
+	cp betterfetchrc.sh /usr/bin/betterfeth
+	cp betterfetchrc /etc/betterfetchrc
 	cp betterfetch-version /etc/betterfetch-version
+	echo done!
 
 uninstall:
-	rm ${INSTALL_DIR}${OUT_NAME}
-
-rmconfig:
+	rm /usr/bin/betterfetch
+	rm /usr/bin/betterfetchrc
 	rm /etc/betterfetchrc
+	rm /etc/betterfetch-version
+	echo done!
