@@ -5,7 +5,7 @@ help:
 
 install:
 	cp betterfetch.sh /usr/bin/betterfetch
-	cp betterfetchrc.sh /usr/bin/betterfeth
+	cp betterfetchrc.sh /usr/bin/betterfetchrc
 	cp betterfetchrc /etc/betterfetchrc
 	cp betterfetch-version /etc/betterfetch-version
 	echo done!
