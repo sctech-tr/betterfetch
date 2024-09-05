@@ -19,7 +19,9 @@ type ```betterfetchrc``` to edit the config file
 ## How do I install it?
 ### Linux
 #### Distros that use RPM
-i have a copr build pending. once it finishes, i will update this. meanwhile, you can download the latest rpm file from a release.
+download the latest rpm package from the releases page.
+#### Debian-based distros
+download the latest deb package from the releases page.
 #### Other distros
 run this:
 ```
