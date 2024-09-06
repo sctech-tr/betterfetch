@@ -60,7 +60,7 @@ in wsl, run the command above.
 ## Will you provide a screenshot?
 yes
 
-![screenshot](https://github.com/user-attachments/assets/2ae9c117-38d0-4365-b5a4-585f18d455e9)
+![screenshot](https://github.com/user-attachments/assets/a3e5f323-7f12-48cf-8332-c99d99742fb8)
 ## Why is there no logo?
 whenever i added a new line, i had to improve the drawing. i don't like ascii drawing, so I removed it. if you still want a logo, use something else.
 ## Where are the files?
