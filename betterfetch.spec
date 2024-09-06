@@ -1,5 +1,5 @@
 Name:           betterfetch
-Version:        1.5
+Version:        1.6
 Release:        1%{?dist}
 Summary:        A script to quickly display system information
 License:        GPL-3.0-or-later
@@ -35,5 +35,5 @@ install -D -m 0644 betterfetch-version %{buildroot}/etc/betterfetch-version
 /etc/betterfetch-version
 
 %changelog
-* Wed Sep 04 2024 sctech-tr <100468871+sctech-tr@users.noreply.github.com> - 1.5-1
-- Initial packaging of betterfetch version 1.5
+* Wed Sep 06 2024 sctech-tr <100468871+sctech-tr@users.noreply.github.com> - 1.6-1
+- Initial packaging of betterfetch version 1.6
