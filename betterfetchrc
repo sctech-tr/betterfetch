@@ -11,3 +11,6 @@
 #shell=mysh
 #de=CustomDE
 #terminal=konsole
+#cpu=cpuhere
+#init=myinit
+#ip=437482937
