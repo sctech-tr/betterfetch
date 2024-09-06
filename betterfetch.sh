@@ -60,7 +60,7 @@ if [ -z "$terminal" ]; then
       fi
     done
 fi
-[ -z "$ip" ] && de=$("ip -f inet a | awk '/inet / { print $2 }' | tail -n 1 | sed 's/\/.*//'`")
+[ -z "$ip" ] && de=$("ip -f inet a | awk '/inet / { print $2 }' | tail -n 1 | sed 's/\/.*//'")
 if [ -z "$init" ]; then
 	if [[ -f "/lib/systemd/systemd" ]]; then
 		init="systemd"
