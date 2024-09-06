@@ -60,7 +60,20 @@ if [ -z "$terminal" ]; then
       fi
     done
 fi
-
+[ -z "$ip" ] && de=$("ip -f inet a | awk '/inet / { print $2 }' | tail -n 1 | sed 's/\/.*//'`")
+if [ -z "$init" ]; then
+	if [[ -f "/lib/systemd/systemd" ]]; then
+		init="systemd"
+	elif [[ -f "/sbin/openrc" ]]; then
+		init="OpenRC"
+	elif [[ -f "/usr/bin/runit" ]]; then
+		init="runit"
+	elif [[ -f "/usr/bin/s6-rc" ]]; then
+		init="s6"
+	elif [[ -f "/etc/systemd/user.conf" ]]; then
+        	init="systemd"
+	fi
+fi
 
 printf "$USER@$host\n"
 printf "OS           ${nc} $os\n"
@@ -68,7 +81,9 @@ printf "Kernel       ${nc} $kernel\n"
 printf "Uptime       ${nc} $uptime\n"
 printf "Shell        ${nc} $shell\n"
 printf "DE           ${nc} $de\n"
-printf "Terminal     ${nc} $terminal\n"
+printf "CPU          ${nc} $cpu\n"
+printf "Init         ${nc} $init\n"
+printf "Local IP     ${nc} $ip\n"
 if [ "$colorsoff" != 1 ]; then
 	printf "${dslogo6}\033[0;31m● \033[0;32m● \033[0;33m● \033[0;34m● \033[0;35m● \033[0;36m● \033[0;37m●\033[0m\n"
 fi
