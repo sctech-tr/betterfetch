@@ -11,6 +11,9 @@ currently it shows these:
 - terminal shell.
 - desktop environment.
 - terminal emulator.
+- your cpu.
+- your init. (e.g. systemd)
+- local ip.
 - 7 colored dots to identify terminal colors.
 ## How do I use it?
 type ```betterfetch``` to run it
@@ -60,7 +63,8 @@ in wsl, run the command above.
 ## Will you provide a screenshot?
 yes
 
-![screenshot](https://github.com/user-attachments/assets/a3e5f323-7f12-48cf-8332-c99d99742fb8)
+![screenshot of betterfetch](https://github.com/user-attachments/assets/d68e3062-090b-493a-aaeb-52fbc2530476)
+
 ## Why is there no logo?
 whenever i added a new line, i had to improve the drawing. i don't like ascii drawing, so I removed it. if you still want a logo, use something else.
 ## Where are the files?
