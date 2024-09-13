@@ -4,7 +4,7 @@ Release:        1%{?dist}
 Summary:        A script to quickly display system information
 License:        GPL-3.0-or-later
 URL:            https://github.com/sctech-tr/betterfetch
-Source0:        %{URL}/archive/v%{version}/%{name}-%{version}.tar.gz
+Source0:        %{URL}/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  bash
