@@ -1,0 +1,2 @@
+*.spec linguist-language=RPMSpec
+*.rpm linguist-language=RPMSpec
