@@ -1,2 +1,4 @@
 *.spec linguist-language=RPMSpec
-*.rpm linguist-language=RPMSpec
+*.src.rpm linguist-language=RPMSpec
+*.spec linguist-detectable
+*.src.rpm linguist-detectable
