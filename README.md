@@ -1,3 +1,5 @@
+# THIS REPO HAS BEEN MOVED TO CODEBERG
+# https://codeberg.org/sctech/betterfetch
 # betterfetch 📜
 ## What's betterfetch? 
 betterfetch is a fetch script used to quickly show system information in terminal. it's a fork of <a href="https://github.com/emilydaemon/zfetch">zfetch</a>.
@@ -35,7 +37,7 @@ download the latest deb package from the releases page.
 #### Other distros
 run this:
 ```
-git clone https://github.com/sctech-tr/betterfetch.git 
+git clone https://codeberg.org/sctech/betterfetch.git 
 cd betterfetch
 sudo make install
 ```
