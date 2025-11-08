@@ -1,5 +1,3 @@
-# THIS REPO HAS BEEN MOVED TO CODEBERG
-# https://codeberg.org/sctech/betterfetch
 # betterfetch 📜
 ## What's betterfetch? 
 betterfetch is a fetch script used to quickly show system information in terminal. it's a fork of <a href="https://github.com/emilydaemon/zfetch">zfetch</a>.
